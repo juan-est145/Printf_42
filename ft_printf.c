@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 10:26:26 by juestrel          #+#    #+#             */
-/*   Updated: 2023/12/15 13:34:52 by juestrel         ###   ########.fr       */
+/*   Updated: 2023/12/15 13:59:15 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_printf(char const *string, ...)
 		}
 		if (string[i] != '\0')
 		{
-			ft_putchar_fd(string[i], 1);
+			ft_put_uns_char_fd(string[i], 1);
 			counter++;
 			i++;
 		}
