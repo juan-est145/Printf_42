@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   header.h                                           :+:      :+:    :+:   */
+/*   ft_print_string.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 10:28:22 by juestrel          #+#    #+#             */
-/*   Updated: 2023/12/15 15:04:54 by juestrel         ###   ########.fr       */
+/*   Created: 2023/12/15 14:40:44 by juestrel          #+#    #+#             */
+/*   Updated: 2023/12/15 15:04:16 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HEADER_H
-# define HEADER_H
-# include <stdarg.h>
-# include <unistd.h>
+#include "header.h"
+#include "libft/libft.h"
 
-int		ft_printf(char const *string, ...);
-int		ft_print_char(int arg, unsigned int *i);
-void	ft_put_uns_char_fd(unsigned char c, int fd);
-int		ft_print_string(char *string, unsigned int *i);
-#endif
+int	ft_print_string(char *string, unsigned int *i)
+{
+	int	counter;
+
+	counter = ft_strlen(string);
+	ft_putstr_fd(string, 1);
+	(*i) += 2;
+	return (counter);
+}
