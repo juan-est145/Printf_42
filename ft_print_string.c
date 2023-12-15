@@ -6,11 +6,11 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 14:40:44 by juestrel          #+#    #+#             */
-/*   Updated: 2023/12/15 15:04:16 by juestrel         ###   ########.fr       */
+/*   Updated: 2023/12/15 18:13:35 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "ft_printf.h"
 #include "libft/libft.h"
 
 int	ft_print_string(char *string, unsigned int *i)

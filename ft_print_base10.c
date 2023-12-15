@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_char.c                                    :+:      :+:    :+:   */
+/*   ft_print_base10.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 11:32:46 by juestrel          #+#    #+#             */
-/*   Updated: 2023/12/15 18:13:32 by juestrel         ###   ########.fr       */
+/*   Created: 2023/12/15 16:16:28 by juestrel          #+#    #+#             */
+/*   Updated: 2023/12/15 18:13:27 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft/libft.h"
 
-int	ft_print_char(int args, unsigned int *i)
+int	ft_print_base10(int number, unsigned int *i)
 {
-	int	counter;
+	char	*str_number;
+	int		counter;
 
-	counter = 1;
-	ft_put_uns_char_fd((unsigned char)args, 1);
-	(*i) += 2;
+	str_number = ft_itoa(number);
+	counter = ft_print_string(str_number, i);
+	if (str_number != NULL)
+	{
+		free(str_number);
+	}
 	return (counter);
 }

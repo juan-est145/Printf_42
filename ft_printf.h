@@ -6,12 +6,12 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 10:28:22 by juestrel          #+#    #+#             */
-/*   Updated: 2023/12/15 15:04:54 by juestrel         ###   ########.fr       */
+/*   Updated: 2023/12/15 18:10:26 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HEADER_H
-# define HEADER_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 # include <stdarg.h>
 # include <unistd.h>
 
@@ -19,4 +19,5 @@ int		ft_printf(char const *string, ...);
 int		ft_print_char(int arg, unsigned int *i);
 void	ft_put_uns_char_fd(unsigned char c, int fd);
 int		ft_print_string(char *string, unsigned int *i);
+int		ft_print_base10(int number, unsigned int *i);
 #endif
