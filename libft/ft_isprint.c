@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   header.h                                           :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 10:28:22 by juestrel          #+#    #+#             */
-/*   Updated: 2023/12/15 10:50:31 by juestrel         ###   ########.fr       */
+/*   Created: 2023/11/27 13:21:35 by juestrel          #+#    #+#             */
+/*   Updated: 2023/11/27 13:24:46 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HEADER_H
-# define HEADER_H
-# include <stdarg.h>
-# include <unistd.h>
+#include "libft.h"
 
-int	ft_printf(char const *string, ...);
-#endif
+int	ft_isprint(int c)
+{
+	if (c >= 32 && c <= 126)
+	{
+		return (c);
+	}
+	else
+	{
+		return (0);
+	}
+}

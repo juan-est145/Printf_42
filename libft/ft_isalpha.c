@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   header.h                                           :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 10:28:22 by juestrel          #+#    #+#             */
-/*   Updated: 2023/12/15 10:50:31 by juestrel         ###   ########.fr       */
+/*   Created: 2023/11/27 11:39:08 by juestrel          #+#    #+#             */
+/*   Updated: 2023/12/04 13:55:59 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HEADER_H
-# define HEADER_H
-# include <stdarg.h>
-# include <unistd.h>
-
-int	ft_printf(char const *string, ...);
-#endif
+int	ft_isalpha(int c)
+{
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	{
+		return (c);
+	}
+	else
+	{
+		return (0);
+	}
+}

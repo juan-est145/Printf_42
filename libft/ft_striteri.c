@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   header.h                                           :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 10:28:22 by juestrel          #+#    #+#             */
-/*   Updated: 2023/12/15 10:50:31 by juestrel         ###   ########.fr       */
+/*   Created: 2023/12/01 17:21:27 by juestrel          #+#    #+#             */
+/*   Updated: 2023/12/01 17:27:33 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HEADER_H
-# define HEADER_H
-# include <stdarg.h>
-# include <unistd.h>
+#include "libft.h"
 
-int	ft_printf(char const *string, ...);
-#endif
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+{
+	int	i;
+
+	i = 0;
+	if (s == NULL || f == NULL)
+	{
+		return ;
+	}
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
+}
