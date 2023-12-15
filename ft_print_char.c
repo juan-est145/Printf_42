@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 10:26:26 by juestrel          #+#    #+#             */
-/*   Updated: 2023/12/15 13:34:52 by juestrel         ###   ########.fr       */
+/*   Created: 2023/12/15 11:32:46 by juestrel          #+#    #+#             */
+/*   Updated: 2023/12/15 11:57:05 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 #include "libft/libft.h"
 
-int	ft_printf(char const *string, ...)
+int	ft_print_char(int args, int *i)
 {
-	va_list	args;
-	int		i;
-	int		counter;
+	int	counter;
 
-	va_start(args, string);
-	i = 0;
-	counter = 0;
-	while (string[i] != '\0')
-	{
-		if (string[i] == '%' && string[i + 1] == 'c')
-		{
-			counter += ft_print_char(va_arg(args, int), &i);
-		}
-		if (string[i] != '\0')
-		{
-			ft_putchar_fd(string[i], 1);
-			counter++;
-			i++;
-		}
-	}
+	counter = 1;
+	(*i)++;
+	ft_putchar_fd((char)args, 1);
+	(*i)++;
 	return (counter);
 }
