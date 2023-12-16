@@ -11,6 +11,7 @@ ft_print_lower_hex.c\
 ft_print_upper_hex.c\
 ft_print_uns_base10.c\
 ft_itoa_uns.c\
+ft_print_percentage.c\
 
 OBJS = $(SCRS:.c=.o)
 
