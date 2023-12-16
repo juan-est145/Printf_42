@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 10:26:26 by juestrel          #+#    #+#             */
-/*   Updated: 2023/12/15 18:13:38 by juestrel         ###   ########.fr       */
+/*   Updated: 2023/12/16 17:42:23 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,9 @@ int	ft_printf(char const *str, ...)
 			counter += ft_print_string(va_arg(args, char *), &i);
 		else if (str[i] == '%' && (str[i + 1] == 'i' || str[i + 1] == 'd'))
 			counter += ft_print_base10(va_arg(args, int), &i);
-		if (str[i] != '\0')
+		else if (str[i] == '%' && str[i + 1] == 'x')
+			counter += ft_print_lower_hex(va_arg(args, int), &i);
+		if (str[i] != '\0' && str[i] != '%')
 		{
 			ft_put_uns_char_fd(str[i], 1);
 			counter++;
