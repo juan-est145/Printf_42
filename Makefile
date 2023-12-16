@@ -9,6 +9,8 @@ ft_printf.c\
 ft_put_uns_char_fd.c\
 ft_print_lower_hex.c\
 ft_print_upper_hex.c\
+ft_print_uns_base10.c\
+ft_itoa_uns.c\
 
 OBJS = $(SCRS:.c=.o)
 

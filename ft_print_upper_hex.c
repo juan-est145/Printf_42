@@ -6,14 +6,14 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 18:36:29 by juestrel          #+#    #+#             */
-/*   Updated: 2023/12/16 18:37:17 by juestrel         ###   ########.fr       */
+/*   Updated: 2023/12/16 19:05:32 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft/libft.h"
 
-static void	ft_putnbr_hex(unsigned int hexa, unsigned int *counter)
+static void	ft_putnbr_hex(unsigned int hexa, int *counter)
 {
 	if (hexa >= 16)
 	{
@@ -37,7 +37,7 @@ static void	ft_putnbr_hex(unsigned int hexa, unsigned int *counter)
 
 int	ft_print_upper_hex(unsigned int hexa, unsigned int *i)
 {
-	unsigned int	counter;
+	int	counter;
 
 	counter = 0;
 	ft_putnbr_hex(hexa, &counter);

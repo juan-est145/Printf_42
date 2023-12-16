@@ -1,46 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_lower_hex.c                               :+:      :+:    :+:   */
+/*   ft_print_uns_base10.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/16 17:42:54 by juestrel          #+#    #+#             */
-/*   Updated: 2023/12/16 19:04:58 by juestrel         ###   ########.fr       */
+/*   Created: 2023/12/16 18:45:11 by juestrel          #+#    #+#             */
+/*   Updated: 2023/12/16 19:03:46 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft/libft.h"
 
-static void	ft_putnbr_hex(unsigned int hexa, int *counter)
+int	ft_print_uns_base10(unsigned int number, unsigned int *i)
 {
-	if (hexa >= 16)
-	{
-		ft_putnbr_hex(hexa / 16, counter);
-		ft_putnbr_hex(hexa % 16, counter);
-	}
-	else if (hexa <= 15)
-	{
-		if (hexa <= 9)
-		{
-			ft_putchar_fd(hexa + '0', 1);
-			(*counter)++;
-		}
-		else if (hexa >= 10)
-		{
-			ft_putchar_fd((hexa - 10) + 'a', 1);
-			(*counter)++;
-		}
-	}
-}
+	char	*str_number;
+	int		counter;
 
-int	ft_print_lower_hex(unsigned int hexa, unsigned int *i)
-{
-	int	counter;
-
-	counter = 0;
-	ft_putnbr_hex(hexa, &counter);
-	(*i) += 2;
+	str_number = ft_itoa_uns(number);
+	counter = ft_print_string(str_number, i);
+	if (str_number != NULL)
+	{
+		free(str_number);
+	}
 	return (counter);
 }
