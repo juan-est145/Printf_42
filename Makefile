@@ -8,6 +8,7 @@ ft_print_string.c\
 ft_printf.c\
 ft_put_uns_char_fd.c\
 ft_print_lower_hex.c\
+ft_print_upper_hex.c\
 
 OBJS = $(SCRS:.c=.o)
 
