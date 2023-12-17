@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 10:28:22 by juestrel          #+#    #+#             */
-/*   Updated: 2023/12/16 19:45:21 by juestrel         ###   ########.fr       */
+/*   Updated: 2023/12/17 12:01:14 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ int		ft_print_upper_hex(unsigned int hexa, unsigned int *i);
 int		ft_print_uns_base10(unsigned int number, unsigned int *i);
 char	*ft_itoa_uns(unsigned int n);
 int		ft_print_percentage(char c, unsigned int *i);
+int		ft_print_ptr(void *decimal_ptr, unsigned int *i);
 #endif

@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 10:26:26 by juestrel          #+#    #+#             */
-/*   Updated: 2023/12/16 19:44:39 by juestrel         ###   ########.fr       */
+/*   Updated: 2023/12/17 11:55:32 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ static void	ft_print_var(unsigned int *i, int *counter, char const *str,
 		*counter += ft_print_lower_hex(va_arg(args, unsigned int), i);
 	else if (str[*i] == '%' && str[*i + 1] == 'X')
 		*counter += ft_print_upper_hex(va_arg(args, unsigned int), i);
+	else if (str[*i] == '%' && str[*i + 1] == 'p')
+		*counter += ft_print_ptr(va_arg(args, void *), i);
 	else if (str[*i] == '%' && str[*i + 1] == '%')
 		*counter += ft_print_percentage('%', i);
 }
